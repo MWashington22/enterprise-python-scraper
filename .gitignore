@@ -1,0 +1,36 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+
+# Gmail and Streamlit secrets
+.streamlit/secrets.toml
+
+# Logs
+*.log
+
+# Generated scraper data
+scraper/data/*.csv
+scraper/data/*.xlsx
+scraper/data/*.json
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Backup files
+dashboard_backup.py
+
+# Sensitive keys and certificates
+*.pem
+*.key
