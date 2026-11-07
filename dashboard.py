@@ -27,40 +27,105 @@ DATA_DIR = BASE_DIR / "scraper" / "data"
 st.markdown("""
 <style>
 
+/* Main application background */
 .stApp {
-    background-color: #0e1117;
+    background-color: #F5F7FA;
 }
 
+/* Main content spacing */
 .block-container {
     padding-top: 2rem;
     padding-bottom: 2rem;
+    max-width: 1400px;
 }
 
+/* Sidebar */
 [data-testid="stSidebar"] {
-    background-color: #161b25;
+    background-color: #263238;
 }
 
+/* Sidebar text visibility */
+[data-testid="stSidebar"] * {
+    color: #F5F7FA !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] strong {
+    color: #F5F7FA !important;
+}
+
+/* Metric cards */
 [data-testid="stMetric"] {
-    background-color: #1b2331;
-    padding: 18px;
-    border-radius: 10px;
-    border: 1px solid #293548;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #E1E7ED;
+    box-shadow: 0 2px 6px rgba(38, 50, 56, 0.05);
 }
 
+/* Metric labels */
 [data-testid="stMetricLabel"] {
-    color: #aab7c9;
+    color: #687782;
 }
 
+/* Metric values */
 [data-testid="stMetricValue"] {
-    color: #ffffff;
+    color: #263238;
 }
 
+/* Headings */
 h1, h2, h3 {
-    color: #ffffff;
+    color: #263238;
 }
 
+/* Paragraph text */
 p {
-    color: #b8c4d6;
+    color: #52616B;
+}
+
+/* General text */
+.stMarkdown {
+    color: #52616B;
+}
+
+/* Buttons */
+.stButton > button {
+    background-color: #159D91;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+}
+
+.stButton > button:hover {
+    background-color: #117F76;
+    color: #FFFFFF;
+    border: none;
+}
+
+/* Dataframes and tables */
+[data-testid="stDataFrame"] {
+    border: 1px solid #E1E7ED;
+    border-radius: 10px;
+}
+
+/* Input fields */
+.stTextInput input,
+.stNumberInput input {
+    background-color: #FFFFFF;
+    color: #263238;
+    border-radius: 7px;
+}
+
+/* Select boxes */
+.stSelectbox div[data-baseweb="select"] {
+    background-color: #FFFFFF;
+}
+
+/* Dividers */
+hr {
+    border-color: #E1E7ED;
 }
 
 </style>
@@ -147,8 +212,10 @@ with st.sidebar:
 
     st.write("**Currency:** USD")
 
-    st.write("**Products:**", len(products))
-
+    st.markdown(
+    f"<p style='color: #F5F7FA;'><strong>Products:</strong> {len(products)}</p>",
+    unsafe_allow_html=True
+    )
     st.write("**Platform:** Streamlit")
 
     st.divider()
