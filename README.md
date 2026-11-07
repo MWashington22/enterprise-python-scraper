@@ -16,6 +16,22 @@ An interactive Streamlit dashboard provides a centralized interface for reviewin
 
 The current implementation successfully collects 1,000 products across 100 catalog pages from Books to Scrape.
 
+## Dashboard Preview
+
+The application includes an interactive Streamlit dashboard with four main sections.
+
+### Overview
+![Dashboard Overview](docs/screenshots/dashboard-overview.png)
+
+### Price Analytics
+![Price Analytics](docs/screenshots/price-analytics.png)
+
+### Product Catalog
+![Product Catalog](docs/screenshots/product-catalog.png)
+
+### Price Alerts
+![Price Alerts](docs/screenshots/price-alerts.png)
+
 ## Key Features
 
 ### Web Scraping & Data Extraction
