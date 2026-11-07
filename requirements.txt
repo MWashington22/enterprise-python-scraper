@@ -4,5 +4,6 @@ lxml
 pandas
 tqdm
 schedule
-psycopg2
 psycopg2-binary
+streamlit
+plotly
