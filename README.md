@@ -71,18 +71,25 @@ The application includes an interactive Streamlit dashboard with four main secti
 - Price drop and increase reports.
 - Interactive Plotly visualizations.
 
-## Dashboard
+## Automated Testing
 
-The application includes four main dashboard sections:
+The project includes automated tests using pytest.
 
-| Section | Description |
-|---|---|
-| Overview | Product totals, average prices, and pricing metrics |
-| Price Analytics | Historical pricing and product price analysis |
-| Product Catalog | Searchable and filterable product database |
-| Price Alerts | Price drops and price increases |
+The test suite covers:
 
-Dashboard screenshots will be added here.
+- Product data extraction.
+- Catalog scraping and retry handling.
+- Data validation and cleaning.
+- Historical price tracking.
+- Price change detection.
+- Invalid price handling.
+
+Run the complete test suite:
+
+```bash
+python -m pytest -v
+```
+Latest test results: 25 passed.
 
 ## Technology Stack
 
@@ -101,7 +108,6 @@ Dashboard screenshots will be added here.
 
 ## Project Structure
 
-```text
 enterprise-python-scraper/
 │
 ├── .gitignore
@@ -109,6 +115,19 @@ enterprise-python-scraper/
 ├── dashboard.py
 ├── requirements.txt
 ├── test_gmail.py
+│
+├── docs/
+│   └── screenshots/
+│       ├── dashboard-overview.png
+│       ├── price-analytics.png
+│       ├── product-catalog.png
+│       └── price-alerts.png
+│
+├── tests/
+│   ├── test_catalog.py
+│   ├── test_price_tracker.py
+│   ├── test_product.py
+│   └── test_validation.py
 │
 └── scraper/
     ├── __init__.py
@@ -138,7 +157,6 @@ enterprise-python-scraper/
         ├── __init__.py
         ├── logger.py
         └── parsing.py
-```
 
 ## Installation
 
